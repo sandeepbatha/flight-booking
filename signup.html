@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Welcome to flight booking</title>
+    <div id="back">
+    <style>
+		#back{
+               background-image:url("flight.jpeg");
+               width:100%;
+               height:100%;
+               top:0;
+              left:0;
+              z-index:-5000;
+              position:absolute;
+        }
+		input[type=text],input[type=password]
+		{
+			height:30px;
+			width:300px;
+			margin-left:5px;
+			border-radius:5px;
+			font-size:20px;
+		}	
+		input::-webkit-input-placeholder {
+			font-size: 16px;
+			line-height: 3;
+		}
+		#box
+       {
+           width:600px;
+           height:500px;
+           margin-left:26%;
+           border-radius:10px;
+           border: 10px double #d7cec7;
+           background-color:#565656;
+           margin-top:-3.3em;
+       }
+	   input[type=submit]{
+		   padding:8px 16px;
+		   background-color:#666633;
+		   color:#d7cec7;
+		   font-size:16px;
+		   border-radius:5px;
+		   border:2px solid yellow;
+                   margin-top:5px;
+		   cursor:pointer;
+        }
+		input[type=submit]:hover{
+		    opacity:0.5;
+		    box-shadow:2px 4px 2px #f4f4f4;
+	    }
+    </style>
+    <script>
+       function validateForm() {
+          var x = document.forms["myform"]["pass"].value;
+          var y = document.forms["myform"]["cpass"].value;
+          if (x !== y){
+              document.getElementById("msg").innerHTML="passwords did not match";
+              return false;
+          }
+          return true;
+    } 
+    </script>
+</head>
+<body>
+    <i><h1 align="center" style="margin-top:5%;color:#c0b283w;font-size:40px;">Online Flight Booking</h1></i><br><br> 
+    <div id="box" align="center">
+	<form name="myform" action="#" onsubmit="return validateForm()" method="POST"> 
+		<table align="center">
+	        <tr>
+                <td><h3>Username:</h3></td>
+                <td><input type="text" size="30" placeholder="Enter username"></td>
+			</tr>
+			<tr>
+				<td><h3>Password:</h3></td>
+				<td><input type="password" name="pass" size="30" placeholder="Should be 8 char/symbols aleast"></td>
+			</tr>
+			<tr>
+				<td><h3>Confirm Password:</h3></td>
+				<td><input type="password" name="cpass" size="30" placeholder="Enter password"><br><br><span id="msg" style="color:red;"></span></td>
+			</tr>
+			<tr>
+				<td><h3>Email:</h3></td>
+				<td><input type="text" name="email" size="30" placeholder="Enter valid email"></td>
+			</tr>
+			<tr>
+				<td><h3>Gender:</h3></td>
+				<td><input type="radio" name="gender" value="male"> <b>Male</b> &nbsp&nbsp
+                    <input type="radio" name="gender" value="female"> <b>Female</b> &nbsp&nbsp
+                    <input type="radio" name="gender" value="other"> <b>Other</b>
+				</td>
+			</tr>
+			<tr>
+			    <td><h3>Address:</h3></td>
+			    <td><textarea rows="5" cols="45" name="äddr"></textarea></td><br>
+			<tr>
+				<td><input type="submit"></td>
+			</tr>	
+		</table>	
+	</div> 
+	</div>  
+</body>
+</html>
