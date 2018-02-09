@@ -53,13 +53,8 @@
           var y = document.forms["myform"]["pass"].value;
           if (x == "" && y == ""){
              document.getElementById("msg").innerHTML="Enter details";
-             return false;}
-          if (x == "" && y!= ""){
-             document.getElementById("msg").innerHTML="Enter username";
-             return false;}
-          if (y == "" && x!= "") {
-             document.getElementById("msg").innerHTML="Enter password";
-             return false;}
+             return false;
+	  }
           else
              return true;
         }  
@@ -69,7 +64,7 @@
       <h1 align="center" style="margin-top:10%;color:#c09f80;"> USER LOGIN </h1>
         <form name="myform" action="mypage.html" onsubmit="return validateForm()" style="margin-top:8%;">
 	   <input name="user"  type="text" style="border-radius:5px;font-size:20px" size=30 placeholder="Enter username" required><br><br>  
-           <input name="pass" style="border-radius:5px;font-size:20px" type="password" size=30 placeholder="Enter password"><br>
+           <input name="pass" style="border-radius:5px;font-size:20px" type="password" size=30 placeholder="Enter password" required><br>
            <br><span id="msg" style="color:yellow;"></span><br><br>
            <input type="submit" id="button1" value="LOGIN">
         </form>
